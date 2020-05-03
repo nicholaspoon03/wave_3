@@ -5,16 +5,19 @@ factor_list = []
 prime = False
 
 if n >= 2:
-    for i in range(2, n+1):
+    for i in range(2, n):
         if n == 2:
             prime = True
             break
         elif n % i == 0:
+            prime = False
             break
         else:
             prime = True
     
-    if not prime:
+    if prime:
+        factor_list.append(n)
+    else:
         while factor <= n:
             if number % factor == 0:
                 factor_list.append(factor)
@@ -22,11 +25,9 @@ if n >= 2:
                 factor = 2
             else:
                 factor += 1
-    else:
-        factor_list.append(n)
 
     print(f'The prime factors of {n} are:')
     for i in factor_list:
         print(i)
 else:
-    print('Please print a valid number.')
+    print('Please enter a valid number.')
