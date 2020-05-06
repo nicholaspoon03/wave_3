@@ -18,6 +18,6 @@ def prime_number(number):
 
 
 if prime_number(number):
-    print(True)
+    print('Prime')
 else:
-    print(False)
+    print('Not Prime')
